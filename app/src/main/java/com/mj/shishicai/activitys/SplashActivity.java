@@ -30,7 +30,7 @@ public class SplashActivity extends UIActivity<ActivitySplashBinding> {
 
 
     private void queryConfig() {
-        OkGo.<String>get("https://appid-apkk.xx-app.com/frontApi/getAboutUs?appid=2017369")
+        OkGo.<String>get("https://appid-apkk.xx-app.com/frontApi/getAboutUs?appid=94836901")
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(Response<String> response) {
