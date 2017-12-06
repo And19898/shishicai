@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "http://10.66.72.173:8081/nexus/content/repositories/GoogleMaven/" }
+        maven { url "http://10.66.72.173:8081/nexus/content/repositories/JCenter/" }
+        maven { url "http://10.66.72.173:8081/nexus/content/repositories/MavenCentral/" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.2'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://raw.github.com/bmob/bmob-android-sdk/master"
+        }
+        maven {
+            url "http://mvn.leancloud.cn/nexus/content/repositories/public"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+        maven { url "http://10.66.72.173:8081/nexus/content/repositories/GoogleMaven/" }
+        maven { url "http://10.66.72.173:8081/nexus/content/repositories/JCenter/" }
+        maven { url "http://10.66.72.173:8081/nexus/content/repositories/MavenCentral/" }
+        maven { url "http://10.66.72.173:8081/nexus/content/repositories/releases/" }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

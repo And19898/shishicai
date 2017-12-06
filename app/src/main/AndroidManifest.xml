@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mj.shishicai">
+    <!-- 基础模块（必须加入以下声明）START -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 基础模块 END -->
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application
+        android:name="com.mj.shishicai.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.mj.shishicai.activitys.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.mj.shishicai.activitys.WXMeiwenActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.mj.shishicai.activitys.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mj.shishicai.activitys.SplashActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mj.shishicai.activitys.ActivityLogin"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mj.shishicai.activitys.XiaohuaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mj.shishicai.activitys.XiaohuaDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mj.shishicai.activitys.AddTieziActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mj.shishicai.activitys.WeixinActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.mj.shishicai.activitys.MyMessageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.mj.shishicai.activitys.TieziDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.mj.shishicai.activitys.ActivityManhua"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.mj.shishicai.activitys.ManhuaDetailActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
