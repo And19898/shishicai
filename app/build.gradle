@@ -8,8 +8,8 @@ android {
         applicationId "com.mj.shishicai"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1206
-        versionName "1.0.1.1206"
+        versionCode 12061
+        versionName "1.0.2.1206"
         resValue "string", "login", "登陆"
         resValue "string", "name", "用户名"
         resValue "string", "password", "密码"
@@ -108,4 +108,5 @@ dependencies {
     compile 'cn.bingoogolapple:bga-indicator:1.0.1@aar'
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
     compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.daimajia.numberprogressbar:library:1.4@aar'
 }

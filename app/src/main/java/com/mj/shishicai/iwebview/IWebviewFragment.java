@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
+import com.mj.shishicai.IDownloadListener;
 import com.mj.shishicai.R;
 import com.mj.shishicai.databinding.FragmentWebviewBinding;
 import com.tencent.smtt.sdk.WebView;
@@ -35,6 +36,7 @@ public class IWebviewFragment extends UIBaseFragment<FragmentWebviewBinding> {
         IWebSetting.init(databinding.webview);
         databinding.webview.setWebChromeClient(chromeClient);
         databinding.webview.setWebViewClient(webViewClient);
+        databinding.webview.setDownloadListener(new IDownloadListener(getActivity()));
     }
 
     public void setWebChromeClient(IWebChromeClient chromeClient) {

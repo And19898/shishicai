@@ -81,6 +81,16 @@
         <activity
             android:name="com.mj.shishicai.activitys.ManhuaDetailActivity"
             android:screenOrientation="portrait" />
+        <service android:name=".update.DownloadAppService" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="@string/AutoUpdateprovide"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

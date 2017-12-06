@@ -6,7 +6,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include layout="@layout/toolbar"/>
+        <include
+            layout="@layout/toolbar"
+            android:visibility="gone" />
 
         <fragment
             android:id="@+id/webfragment"
