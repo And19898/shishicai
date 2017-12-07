@@ -8,8 +8,8 @@ android {
         applicationId "com.mj.shishicai"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 12061
-        versionName "1.0.2.1206"
+        versionCode 12071
+        versionName "1.0.2.1207"
         resValue "string", "login", "登陆"
         resValue "string", "name", "用户名"
         resValue "string", "password", "密码"

@@ -18,11 +18,7 @@ import java.util.List;
 import cn.bmob.v3.Bmob;
 import cn.jpush.android.api.JPushInterface;
 
-/**
- * Created by xinru on 2017/12/2.
- */
-
-public class App extends IWebviewApplication{
+public class App extends IWebviewApplication {
 
     private static Application application;
     private static boolean isTimeout;
@@ -35,9 +31,10 @@ public class App extends IWebviewApplication{
         App.isTimeout = isTimeout;
     }
 
-    public static Application get(){
+    public static Application get() {
         return application;
     }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -46,7 +43,7 @@ public class App extends IWebviewApplication{
         JPushInterface.init(this);
         Bmob.initialize(this, "979f2349e879fb0a4af2868de572a812");
         OkGo.getInstance().init(this);
-        AVOSCloud.initialize(this,"1J7dxpxtmBe9BKL59e7v3d3p-gzGzoHsz","QXU1cpfBzN53LWNOjyHUlngP");
+        AVOSCloud.initialize(this, "1J7dxpxtmBe9BKL59e7v3d3p-gzGzoHsz", "QXU1cpfBzN53LWNOjyHUlngP");
         AVOSCloud.setDebugLogEnabled(BuildConfig.DEBUG);
         AppManager.startWatch(this);
         queryRuntimeConfig();
@@ -73,13 +70,13 @@ public class App extends IWebviewApplication{
         avquery.findInBackground(new FindCallback<AVObject>() {
             @Override
             public void done(List<AVObject> list, AVException e) {
-                if(e != null)return;
-                if(list != null && list.size() != 0){
-                    for(AVObject config : list){
+                if (e != null) return;
+                if (list != null && list.size() != 0) {
+                    for (AVObject config : list) {
                         String packagename = config.getString("packagename");
                         boolean isenable = config.getBoolean("isenable");
-                        LogUtil.e("packagename::"+packagename+" isenable:"+isenable );
-                        if(packagename.equalsIgnoreCase(getPackageName()) && !isenable){
+                        LogUtil.e("packagename::" + packagename + " isenable:" + isenable);
+                        if (packagename.equalsIgnoreCase(getPackageName()) && !isenable) {
                             App.setIsTimeout(true);
                             break;
                         }
